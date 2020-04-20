@@ -62,6 +62,11 @@ func (e *conflictEngine) Configure(pipelineName string, data map[string]interfac
 		cfg.RetrySleepDurationString = "1s"
 	}
 
+	// If MaxConflictRetry is 0, no statement will be executed at all.
+	if cfg.MaxConflictRetry == 0 {
+		cfg.MaxConflictRetry = 1
+	}
+
 	d, err := time.ParseDuration(cfg.RetrySleepDurationString)
 	if err != nil {
 		return errors.Trace(err)
@@ -81,6 +86,8 @@ func (e *conflictEngine) Configure(pipelineName string, data map[string]interfac
 	conflictLog.Out = file
 
 	e.conflictLog = conflictLog
+
+	log.Infof("[conflictEngine] Config is %v", e.cfg)
 
 	return nil
 }
@@ -290,8 +297,12 @@ func (e conflictEngine) close() {
 func (e conflictEngine) execWithRetry(times int, db *sql.DB, stmt string, args ...interface{}) (ret execResult, err error) {
 	for i := 0; i < times; i++ {
 		ret, err = exec(db, stmt, args...)
-		if ret == execSuccess || ret == execFailConflict {
-			log.Info("conflictEngine ret: ", ret, ", stmt: ", stmt, ", params: ", args)
+		if ret == execSuccess {
+			log.Info("[conflictEngine] SUCCESS. stmt: ", stmt, ", params: ", args)
+			return ret, nil
+		}
+		if ret == execFailConflict {
+			log.Info("[conflictEngine] CONFLICT. stmt: ", stmt, ", params: ", args)
 			return ret, nil
 		}
 	}
@@ -323,6 +334,7 @@ func exec(db *sql.DB, stmt string, args ...interface{}) (execResult, error) {
 	}
 
 	if affected == 0 {
+		log.Errorf("[conflictEngine] Zero rows affected by query. Flagging as conflict.")
 		return execFailConflict, nil
 	}
 
