@@ -463,7 +463,7 @@ func (tailer *BinlogTailer) Start() error {
 						continue
 					}
 
-					log.Infof("QueryEvent: database: %s, sql: %s", dbName, ddlSQL)
+					log.Debugf("QueryEvent: database: %s, sql: %s", dbName, ddlSQL)
 
 					if tailer.binlogEventSchemaFilter != nil {
 						if !tailer.binlogEventSchemaFilter(dbName) {
