@@ -334,7 +334,7 @@ func exec(db *sql.DB, stmt string, args ...interface{}) (execResult, error) {
 	}
 
 	if affected == 0 {
-		log.Errorf("[conflictEngine] Zero rows affected by query. Flagging as conflict.")
+		log.Warnf("[conflictEngine] Zero rows affected by query. Flagging as conflict.")
 		return execFailConflict, nil
 	}
 
