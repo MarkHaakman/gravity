@@ -298,7 +298,7 @@ func (e conflictEngine) execWithRetry(times int, db *sql.DB, stmt string, args .
 	for i := 0; i < times; i++ {
 		ret, err = exec(db, stmt, args...)
 		if ret == execSuccess {
-			log.Info("[conflictEngine] SUCCESS. stmt: ", stmt, ", params: ", args)
+			log.Info("[conflictEngine] SUCCESS! stmt: ", stmt, ", params: ", args)
 			return ret, nil
 		}
 		if ret == execFailConflict {
