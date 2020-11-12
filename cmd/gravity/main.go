@@ -37,8 +37,6 @@ var myJson = json.Config{
 }.Froze()
 
 func main() {
-	h, _ := log.NewStreamHandler(os.Stdout)
-	log.SetDefaultLogger(log.New(h, 0))
 	cfg := config.NewConfig()
 	err := cfg.ParseCmd(os.Args[1:])
 	switch errors.Cause(err) {
