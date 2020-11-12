@@ -13,7 +13,8 @@ import (
 	"github.com/moiot/gravity/pkg/registry"
 
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
+	logFile "github.com/sirupsen/logrus"
 
 	"github.com/moiot/gravity/pkg/core"
 
@@ -43,7 +44,7 @@ type conflictEngine struct {
 
 	db *sql.DB
 
-	conflictLog *log.Logger
+	conflictLog *logFile.Logger
 }
 
 func init() {
@@ -76,7 +77,7 @@ func (e *conflictEngine) Configure(pipelineName string, data map[string]interfac
 	e.cfg = &cfg
 
 	// setup conflict log
-	conflictLog := log.New()
+	conflictLog := logFile.New()
 	file, err := os.OpenFile(ConflictFileName, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err == nil {
 		conflictLog.Out = file
@@ -298,7 +299,7 @@ func (e conflictEngine) execWithRetry(times int, db *sql.DB, stmt string, args .
 	for i := 0; i < times; i++ {
 		ret, err = exec(db, stmt, args...)
 		if ret == execSuccess {
-			log.Info("[conflictEngine] SUCCESS! stmt: ", stmt, ", params: ", args)
+			log.Info("[conflictEngine] SUCCESS. stmt: ", stmt, ", params: ", args)
 			return ret, nil
 		}
 		if ret == execFailConflict {
