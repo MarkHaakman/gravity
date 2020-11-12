@@ -9,7 +9,7 @@ import (
 	"github.com/juju/errors"
 	"github.com/mitchellh/mapstructure"
 	"github.com/prometheus/client_golang/prometheus"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/config"
 	"github.com/moiot/gravity/pkg/core"

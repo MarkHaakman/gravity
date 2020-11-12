@@ -10,7 +10,7 @@ import (
 	"github.com/moiot/gravity/pkg/consts"
 
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"strings"
 

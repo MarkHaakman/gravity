@@ -3,7 +3,7 @@ package config
 import (
 	"github.com/BurntSushi/toml"
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 type PipelineConfigV2 struct {

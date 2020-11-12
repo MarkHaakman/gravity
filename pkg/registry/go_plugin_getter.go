@@ -8,7 +8,7 @@ import (
 
 	"github.com/hashicorp/go-getter"
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 const (

@@ -10,7 +10,7 @@ import (
 
 	etcd "github.com/coreos/etcd/clientv3"
 	"github.com/coreos/etcd/mvcc/mvccpb"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/utils"
 )

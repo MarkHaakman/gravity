@@ -5,7 +5,7 @@ import (
 
 	"github.com/juju/errors"
 	"github.com/moiot/gravity/pkg/protocol/dcp"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 type Config struct {

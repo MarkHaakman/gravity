@@ -7,7 +7,7 @@ import (
 	"github.com/moiot/gravity/dcp/collector"
 	"github.com/moiot/gravity/pkg/protocol/dcp"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 // StartLocal starts collector, checker & barrier all in one process

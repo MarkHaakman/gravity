@@ -22,7 +22,7 @@ import (
 
 	"github.com/hashicorp/go-getter"
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 func GetExecutable(url string, dir string, name string) (string, error) {

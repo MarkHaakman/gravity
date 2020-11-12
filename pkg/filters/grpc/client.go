@@ -20,7 +20,7 @@ import (
 	"context"
 	"strings"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/juju/errors"
 	"github.com/moiot/gravity/pkg/core/encoding"

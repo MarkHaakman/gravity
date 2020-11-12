@@ -3,7 +3,7 @@ package offsets
 import (
 	"time"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 // OffsetCommitRequest contains configuration options for requesting commit offset.

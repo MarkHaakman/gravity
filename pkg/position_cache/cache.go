@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 var DefaultFlushPeriod = 5 * time.Second

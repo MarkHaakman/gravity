@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/Shopify/sarama"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	offsets2 "github.com/moiot/gravity/pkg/offsets"
 )

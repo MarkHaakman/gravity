@@ -9,7 +9,7 @@ import (
 	"github.com/juju/errors"
 	"github.com/siddontang/go-mysql/replication"
 	"github.com/siddontang/go/sync2"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/config"
 	"github.com/moiot/gravity/pkg/consts"

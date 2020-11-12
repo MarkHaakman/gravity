@@ -7,7 +7,7 @@ import (
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 	sqlmock "gopkg.in/DATA-DOG/go-sqlmock.v1"
 
 	"github.com/moiot/gravity/pkg/core"

@@ -12,7 +12,7 @@ import (
 	"github.com/moiot/gravity/pkg/outputs/routers"
 	"github.com/moiot/gravity/pkg/registry"
 	"github.com/olivere/elastic"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 const (

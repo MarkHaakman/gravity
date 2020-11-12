@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/coreos/etcd/clientv3"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 const (

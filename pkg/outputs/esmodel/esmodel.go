@@ -12,7 +12,7 @@ import (
 	"github.com/moiot/gravity/pkg/outputs/routers"
 	"github.com/moiot/gravity/pkg/registry"
 	"github.com/olivere/elastic/v7"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 	"net/http"
 	"time"
 )

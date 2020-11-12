@@ -5,7 +5,7 @@ import (
 	"github.com/pingcap/parser/ast"
 	_ "github.com/pingcap/tidb/types/parser_driver"
 	"github.com/siddontang/go-mysql/replication"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 func IsEventBelongsToMyself(event *replication.RowsEvent, pipelineName string) bool {

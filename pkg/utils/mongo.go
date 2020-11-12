@@ -24,7 +24,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 

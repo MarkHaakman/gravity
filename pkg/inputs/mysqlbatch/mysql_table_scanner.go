@@ -15,7 +15,7 @@ import (
 
 	"github.com/juju/errors"
 	"github.com/pingcap/parser"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/core"
 	"github.com/moiot/gravity/pkg/mysql"

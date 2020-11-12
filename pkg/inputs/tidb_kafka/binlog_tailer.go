@@ -9,7 +9,7 @@ import (
 
 	"github.com/Shopify/sarama"
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	gCfg "github.com/moiot/gravity/pkg/config"
 	"github.com/moiot/gravity/pkg/consts"

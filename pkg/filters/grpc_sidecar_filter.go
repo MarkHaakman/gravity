@@ -20,7 +20,7 @@ import (
 	"os/exec"
 	"sync"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	hplugin "github.com/hashicorp/go-plugin"
 	"github.com/juju/errors"

@@ -14,7 +14,7 @@ import (
 
 	"github.com/juju/errors"
 	"github.com/mitchellh/mapstructure"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 	mgo "gopkg.in/mgo.v2"
 
 	"github.com/moiot/gravity/pkg/config"

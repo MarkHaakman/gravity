@@ -11,7 +11,7 @@ import (
 	"github.com/satori/go.uuid"
 	"github.com/siddontang/go-mysql/mysql"
 	"github.com/siddontang/go-mysql/replication"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 var json = jsoniter.ConfigCompatibleWithStandardLibrary

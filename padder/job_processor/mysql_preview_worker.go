@@ -5,7 +5,7 @@ package job_processor
 // 	"sync"
 //
 // 	"github.com/juju/errors"
-// 	log "github.com/sirupsen/logrus"
+// 	"github.com/siddontang/go-log/log"
 //
 // 	"github.com/moiot/gravity/pkg/core"
 //

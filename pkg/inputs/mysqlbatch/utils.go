@@ -11,7 +11,7 @@ import (
 
 	"github.com/moiot/gravity/pkg/utils"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/core"
 	"github.com/moiot/gravity/pkg/schema_store"

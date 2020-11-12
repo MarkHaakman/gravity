@@ -18,7 +18,7 @@ import (
 	"github.com/juju/errors"
 	gomysql "github.com/siddontang/go-mysql/mysql"
 	"github.com/siddontang/go-mysql/replication"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 func getIndexRowsName(db *sql.DB, statement string) ([]string, error) {

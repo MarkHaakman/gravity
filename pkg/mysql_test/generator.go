@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/moiot/gravity/pkg/utils/retry"

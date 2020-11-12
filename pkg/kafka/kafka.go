@@ -8,7 +8,7 @@ import (
 
 	"github.com/Shopify/sarama"
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/config"
 )

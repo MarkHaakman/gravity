@@ -3,7 +3,7 @@ package utils
 import (
 	"fmt"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 // Version information.

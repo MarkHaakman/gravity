@@ -11,7 +11,7 @@ import (
 	"github.com/moiot/gravity/dcp/checker"
 	"github.com/moiot/gravity/dcp/collector"
 	"github.com/moiot/gravity/pkg/utils"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 func main() {

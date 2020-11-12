@@ -9,7 +9,7 @@ import (
 	"github.com/go-sql-driver/mysql"
 
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/utils"
 )

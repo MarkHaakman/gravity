@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 	"github.com/stretchr/testify/require"
 
 	"github.com/moiot/gravity/pkg/app"

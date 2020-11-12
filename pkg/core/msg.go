@@ -8,7 +8,7 @@ import (
 
 	"github.com/juju/errors"
 	"github.com/pingcap/parser/ast"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/consts"
 	"github.com/moiot/gravity/pkg/env"

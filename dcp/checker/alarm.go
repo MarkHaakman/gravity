@@ -1,6 +1,6 @@
 package checker
 
-import log "github.com/sirupsen/logrus"
+import "github.com/siddontang/go-log/log"
 
 type AlarmManager interface {
 	Alarm(r Result)

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"net"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 	"google.golang.org/grpc"
 )
 

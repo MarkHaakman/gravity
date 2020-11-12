@@ -9,7 +9,7 @@ import (
 	json "github.com/json-iterator/go"
 	"github.com/juju/errors"
 	"github.com/prometheus/client_golang/prometheus"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 

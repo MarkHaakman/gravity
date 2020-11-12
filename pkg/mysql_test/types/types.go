@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strconv"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 type ColumnValGenerator interface {

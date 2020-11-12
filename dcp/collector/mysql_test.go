@@ -11,7 +11,7 @@ import (
 	"github.com/moiot/gravity/pkg/utils"
 
 	_ "github.com/go-sql-driver/mysql"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/dcp/barrier"
 	"github.com/moiot/gravity/pkg/protocol/dcp"

@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 type PluginType string

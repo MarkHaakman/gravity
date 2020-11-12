@@ -10,7 +10,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
 	"github.com/juju/errors"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 func SaveOffsetToDB(db *sql.DB, fullTableName string, request *OffsetCommitRequest) (*OffsetCommitResponse, error) {

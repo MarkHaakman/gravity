@@ -8,7 +8,7 @@ import (
 	"github.com/pingcap/parser"
 	"github.com/pingcap/parser/ast"
 	_ "github.com/pingcap/tidb/types/parser_driver"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 
 	"github.com/moiot/gravity/pkg/core"
 	"github.com/moiot/gravity/pkg/env"

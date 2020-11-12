@@ -5,7 +5,7 @@ import (
 	"github.com/moiot/gravity/pkg/core"
 	"github.com/moiot/gravity/pkg/utils"
 	"github.com/olivere/elastic/v7"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
 )
 
 func genDocID(msg *core.Msg, fk string) string {

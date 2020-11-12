@@ -17,7 +17,8 @@ import (
 	json "github.com/json-iterator/go"
 	"github.com/juju/errors"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	log "github.com/sirupsen/logrus"
+	"github.com/siddontang/go-log/log"
+	logFile "github.com/sirupsen/logrus"
 
 	"github.com/moiot/gravity/pkg/app"
 	"github.com/moiot/gravity/pkg/config"
@@ -76,7 +77,7 @@ func main() {
 	logutil.PipelineName = cfg.PipelineConfig.PipelineName
 	consts.GravityDBName = cfg.PipelineConfig.InternalDBName
 
-	log.RegisterExitHandler(func() {
+	logFile.RegisterExitHandler(func() {
 		hplugin.CleanupClients()
 	})
 
