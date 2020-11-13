@@ -242,7 +242,7 @@ func ParseTiDBRow(row pb.Row) (Row, error) {
 }
 
 func (checker *binlogChecker) Start() error {
-	log.Infof("[binlog_checker] start")
+	log.Debugf("[binlog_checker] start")
 	if err := checker.initRepo(); err != nil {
 		return errors.Trace(err)
 	}

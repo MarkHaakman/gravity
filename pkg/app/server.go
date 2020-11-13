@@ -170,7 +170,7 @@ func (s *Server) Start() error {
 		return errors.Trace(err)
 	}
 
-	log.Infof("[Server] start input")
+	log.Debugf("[Server] start input")
 
 	if err := s.Input.Start(s.Emitter, s.Output.GetRouter(), s.PositionCache); err != nil {
 		return errors.Trace(err)
@@ -192,16 +192,16 @@ func (s *Server) Close() {
 
 	log.Infof("[Server] closing..")
 	s.Input.Close()
-	log.Infof("[Server] input closed")
+	log.Debugf("[Server] input closed")
 
 	s.Scheduler.Close()
-	log.Infof("[Server] scheduler closed")
+	log.Debugf("[Server] scheduler closed")
 
 	s.Output.Close()
-	log.Infof("[Server] output closed")
+	log.Debugf("[Server] output closed")
 
 	s.PositionCache.Close()
-	log.Infof("[Server] position store closed")
+	log.Debugf("[Server] position store closed")
 
 	log.Infof("[Server] stopped")
 

@@ -87,7 +87,7 @@ func (e *conflictEngine) Configure(pipelineName string, data map[string]interfac
 
 	e.conflictLog = conflictLog
 
-	log.Infof("[conflictEngine] Config is %v", e.cfg)
+	log.Debugf("[conflictEngine] Config is %v", e.cfg)
 
 	return nil
 }

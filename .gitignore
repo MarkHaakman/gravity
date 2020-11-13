@@ -43,3 +43,4 @@ gravity_mongo.meta.toml
 
 private_plugins
 grpc-sidecar
+cfg/

@@ -54,7 +54,7 @@ func main() {
 		os.Exit(0)
 	}
 
-	log.Info("xxhash backend: ", xxhash.Backend)
+	log.Debug("xxhash backend: ", xxhash.Backend)
 
 	if cfg.ConfigFile != "" {
 		if err := cfg.ConfigFromFile(cfg.ConfigFile); err != nil {

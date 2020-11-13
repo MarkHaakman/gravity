@@ -82,7 +82,7 @@ func (cache *defaultPositionCache) Close() {
 		return
 	}
 
-	log.Infof("[defaultPositionCache] closing")
+	log.Debugf("[defaultPositionCache] closing")
 	close(cache.closeC)
 	cache.wg.Wait()
 	cache.repo.Close()

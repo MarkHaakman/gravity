@@ -105,7 +105,7 @@ func NewBinlogTailer(
 
 func (tailer *BinlogTailer) Start() error {
 
-	log.Infof("[binlogTailer] start")
+	log.Debugf("[binlogTailer] start")
 
 	if err := utils.CheckBinlogFormat(tailer.sourceDB); err != nil {
 		return errors.Trace(err)
@@ -248,7 +248,7 @@ func (tailer *BinlogTailer) Start() error {
 				// we have in position store, we skip it.
 				currentPos := gomysql.Position{Name: currentPosition.BinLogFileName, Pos: currentPosition.BinLogFilePos}
 				if utils.CompareBinlogPos(sourcePosition, currentPos, 0) <= 0 {
-					log.Infof(
+					log.Debugf(
 						"[binlogTailer] skip rotate event: source binlog Name %v, source binlog Pos: %v; store Name: %v, store Pos: %v",
 						sourcePosition.Name,
 						sourcePosition.Pos,
@@ -259,7 +259,7 @@ func (tailer *BinlogTailer) Start() error {
 				}
 				currentPosition.BinLogFileName = string(ev.NextLogName)
 				currentPosition.BinLogFilePos = uint32(ev.Position)
-				log.Infof("[binlogTailer] rotate binlog to %v", sourcePosition)
+				log.Debugf("[binlogTailer] rotate binlog to %v", sourcePosition)
 			case *replication.RowsEvent:
 
 				schemaName, tableName := string(ev.Table.Schema), string(ev.Table.Table)

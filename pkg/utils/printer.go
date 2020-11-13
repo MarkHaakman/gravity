@@ -24,9 +24,6 @@ func PrintRawInfo(app string) {
 
 // LogRotate prints the version information.
 func LogRawInfo(app string) {
-	log.Infof("Welcome to %s.", app)
-	log.Infof("Release Version: %s", Version)
-	log.Infof("Git Commit Hash: %s", GitHash)
-	log.Infof("Git Branch: %s", GitBranch)
-	log.Infof("UTC Build Time: %s", BuildTS)
+	log.Infof("Welcome to %s. Release Version: %s. Git Commit Hash: %s. Git Branch: %s. UTC Build Time: %s.",
+		app, Version, GitHash, GitBranch, BuildTS)
 }

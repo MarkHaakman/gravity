@@ -276,7 +276,8 @@ func CreateDBConnection(cfg *config.DBConfig) (*sql.DB, error) {
 	if cfg.Location != "" {
 		dbDSN += "&loc=" + url.QueryEscape(cfg.Location)
 	}
-	log.Infof("DSN is %s", dbDSN)
+	//log.Infof("DSN is %s", dbDSN)
+	log.Debugf("Connecting to database %s:%v", cfg.Host, cfg.Port)
 	db, err := sql.Open("mysql", dbDSN)
 	if err != nil {
 		return nil, errors.Trace(err)

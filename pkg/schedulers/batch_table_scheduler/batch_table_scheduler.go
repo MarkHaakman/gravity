@@ -340,7 +340,7 @@ func (scheduler *batchScheduler) AckMsg(msg *core.Msg) error {
 }
 
 func (scheduler *batchScheduler) Close() {
-	log.Infof("[batchScheduler] closing scheduler")
+	log.Debugf("[batchScheduler] closing scheduler")
 
 	scheduler.tableBuffersMutex.Lock()
 	for _, c := range scheduler.tableBuffers {
@@ -350,24 +350,25 @@ func (scheduler *batchScheduler) Close() {
 
 	scheduler.tableBufferWg.Wait()
 
-	log.Infof("[batchScheduler] table buffer closed")
+	log.Debugf("[batchScheduler] table buffer closed")
 
 	for _, q := range scheduler.workerQueues {
 		close(q)
 	}
 	scheduler.workerWg.Wait()
 
-	log.Infof("[batchScheduler] worker closed")
+	log.Debugf("[batchScheduler] worker closed")
 
 	for _, q := range scheduler.tableLatchC {
 		close(q)
 	}
-	log.Infof("[batchScheduler] table latch closed")
+	log.Debugf("[batchScheduler] table latch closed")
 
 	for _, w := range scheduler.slidingWindows {
 		w.Close()
 	}
-	log.Infof("[batchScheduler] sliding window closed")
+	log.Debugf("[batchScheduler] sliding window closed")
+	log.Infof("[batchScheduler] closed")
 }
 
 func (scheduler *batchScheduler) dispatchMsg(msg *core.Msg) error {
